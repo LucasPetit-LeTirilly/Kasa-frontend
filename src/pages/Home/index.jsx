@@ -1,5 +1,7 @@
+import Header from "../../components/Header";
+
 function Home() {
-  return <div className="App">voici la page d'accueil</div>;
+  return <Header />;
 }
 
 export default Home;

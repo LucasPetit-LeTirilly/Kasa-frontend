@@ -1,5 +1,7 @@
+import Header from "../../components/Header";
+
 function APropos() {
-  return <div className="App">voici la page a propos</div>;
+  return <Header />;
 }
 
 export default APropos;

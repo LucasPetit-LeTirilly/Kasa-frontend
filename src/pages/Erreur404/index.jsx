@@ -1,5 +1,7 @@
+import Header from "../../components/Header";
+
 function Erreur404() {
-  return <div className="App">voici la page d'erreur</div>;
+  return <Header />;
 }
 
 export default Erreur404;

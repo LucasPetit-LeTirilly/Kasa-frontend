@@ -8,8 +8,8 @@ function Navigation() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/apropos" element={<APropos />} />
+        <Route path="/:pageActuelle" element={<Home />} />
+        <Route path="/apropos:pageActuelle" element={<APropos />} />
         <Route path="/ficheLogement" element={<FicheLogement />} />
         <Route path="*" element={<Erreur404 />} />
       </Routes>
