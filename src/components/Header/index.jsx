@@ -5,12 +5,12 @@ import logo from "../../assets/logos/logo-kasa.svg";
 
 function Header() {
   // Recuperation de l'url et en fonction ajout ou non de la classe css de soulignement
-  const { pageActuelle } = useParams();
+  const pathname = window.location.pathname;
   let souligneAccueil = "";
   let souligneApropos = "";
-  if (pageActuelle === undefined) {
+  if (pathname === "/") {
     souligneAccueil = "lien-souligne";
-  } else if (pageActuelle === "apropos") {
+  } else if (pathname === "/apropos") {
     souligneApropos = "lien-souligne";
   }
 
