@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
 import "../../utils/style/css/style.css";
 import logo from "../../assets/logos/logo-kasa.svg";
 

@@ -6,6 +6,7 @@ function Erreur404() {
   return (
     <React.Fragment>
       <Header />
+      <div>Erreur404</div>
       <Footer />
     </React.Fragment>
   );
