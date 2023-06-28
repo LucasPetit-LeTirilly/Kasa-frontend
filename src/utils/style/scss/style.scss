@@ -47,6 +47,7 @@ body {
   font-size: 1rem;
   margin-left: 6.95%;
   margin-right: 6.95%;
+  line-height: 142.6%;
 }
 
 header {
@@ -63,6 +64,69 @@ header {
 
 .lien-souligne {
   text-decoration: underline;
+}
+// Style page d'erreur
+
+.main-erreur404{
+  text-align: center;
+  .erreur404 {
+    font-size: 18rem;
+    margin-top: 17rem;
+    margin-bottom: 17rem;
+    
+  }
+  p {
+    font-size: 2.25rem;
+    line-height: 170%;
+    margin-bottom: 8.70rem;
+  }
+  .lien-erreur {
+    font-size: 1.125rem;
+    margin-bottom: 8.69rem;
+    display: block;
+  }
+}
+
+
+
+// ================Fin style page d'erreur=============
+footer {
+  background-color: black;
+  color: white;
+  position:absolute;
+  left:0;
+  right:0;
+  padding-top: 4.12rem;
+  padding-bottom: 1.81rem;
+  font-size: 1.5rem;
+  text-align: center;
+  img {
+    width: 122px;
+    height: 39.4px;
+    margin: auto;
+    margin-bottom: 3.155rem;
+  }
+}
+
+@media screen and (max-width: 660px){
+  .main-erreur404{
+    .erreur404 {
+      font-size: 6rem;
+      margin-top: 9rem;
+      margin-bottom: 9rem;
+      
+    }
+    p {
+      font-size: 1.125rem;
+      line-height: 170%;
+      margin-bottom: 7.06rem;
+    }
+    .lien-erreur {
+      font-size: 0.875rem;
+      margin-bottom: 7.06rem;
+      display: block;
+    }
+  }
 }
 
 @media screen and (max-width: 610px){
@@ -84,6 +148,15 @@ header {
     font-size: 0.75rem;
     nav a {
       margin-left: 1.62rem;
+    }
+  }
+}
+
+@media screen and (max-width: 390px){
+  footer{
+    p {
+      padding-left: 5rem;
+      padding-right: 5rem;
     }
   }
 }
