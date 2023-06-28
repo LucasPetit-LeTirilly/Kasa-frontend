@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import FicheLogement from "../../components/FicheLogement";
 
 function PageLogement() {
   const location = useLocation();
@@ -9,10 +10,7 @@ function PageLogement() {
   return (
     <React.Fragment>
       <Header />
-      <article>
-        <p>{logement.title}</p>
-        <img src={logement.pictures[0]} />
-      </article>
+      <FicheLogement logement={logement} />
       <Footer />
     </React.Fragment>
   );
