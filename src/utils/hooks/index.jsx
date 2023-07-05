@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function useFetch() {
   const [tousLogementsData, setTousLogementsData] = useState([]);
@@ -25,6 +26,7 @@ export function useFetch() {
 
 export function useFetchById() {
   const [dataLogement, setDataLogement] = useState([]);
+  const navigate = useNavigate();
   const paramUrl = useParams();
   const id = paramUrl.logementId;
   useEffect(() => {
@@ -37,7 +39,12 @@ export function useFetchById() {
       });
 
       const tousLogements = await response.json();
-      setDataLogement(tousLogements.find((element) => element.id === id));
+      const dataCorrespondante = tousLogements.find(
+        (element) => element.id === id
+      );
+      dataCorrespondante
+        ? setDataLogement(dataCorrespondante)
+        : navigate("/erreurid");
     }
     fetchDataById(id);
   }, [id]);
