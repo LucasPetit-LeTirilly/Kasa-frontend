@@ -1,9 +1,17 @@
-function FicheLogement(props) {
-  const logement = props.logement;
+import React from "react";
+import { useFetchById } from "../../utils/hooks";
+
+function FicheLogement() {
+  const { dataFicheLogement } = useFetchById();
+  const logement = dataFicheLogement;
+
   return (
     <section>
-      <p>{logement.title}</p>
-      <img src={logement.pictures[0]} />
+      {logement ? (
+        <React.Fragment>
+          <p>{logement.title}</p> <img src={logement.pictures?.[0]} />
+        </React.Fragment>
+      ) : null}
     </section>
   );
 }
