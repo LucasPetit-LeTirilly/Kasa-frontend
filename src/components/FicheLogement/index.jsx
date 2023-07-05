@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useFetchById } from "../../utils/hooks";
 import Carousel from "../Carousel";
+import MenuDeroulant from "../MenuDeroulant";
 
 function FicheLogement() {
   const { dataLogement } = useFetchById();
@@ -10,6 +11,15 @@ function FicheLogement() {
     <section>
       <p>{dataLogement.title}</p>
       <Carousel longueur={images?.length} images={images} />
+      <MenuDeroulant
+        texteAffiche="texte visible"
+        texteCache="texte cachéhuoihsfdhsakhjsfdkhjsfdjkhajdsa
+      ajshdbfhjsagdhfjgdsahjfdgfjsagjhfdsgahjgdjasdfjas
+      sdakjfhaksjhfkjsahfjkhdskjfhsjdkhfa
+      sajkfkjshdsdffasfdffsagdfsffffagsdjaklffffsafdfsafdlkjdalkjdfkjasffsafffgsadgasfff
+      sdfsfasfddsafdsafsafdasfdfsdfsafdsafdasdfsafsdlkjfksdjfikjsdkfhjkshajfd
+      sdakjfhsjahfjksaklfjksahfjkshjfhjshfjhsajh"
+      />
     </section>
   );
 }

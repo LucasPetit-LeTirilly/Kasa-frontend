@@ -36,9 +36,13 @@ $color-primary: #ff6060;
 $color-secondary: #ffffff;
 $color-tertiary :#F6F6F6;
 $color-footer: #000000;
-// styling
+// --------------styling global---------------------
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.hidden {
+  display: none;
+}
 
 body {
   color: $color-primary;
@@ -65,6 +69,19 @@ header {
 .lien-souligne {
   text-decoration: underline;
 }
+
+.content-parent {
+  overflow: hidden;
+  transition: height ease 0.4s;
+}
+  
+.content-show {
+  transition: height ease 0.4s;
+}
+
+// --------------fin du styling global---------------------
+
+
 // Style page d'erreur
 
 .main-erreur404{

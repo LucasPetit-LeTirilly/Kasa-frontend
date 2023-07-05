@@ -28,6 +28,10 @@ a {
   color: inherit;
 }
 
+.hidden {
+  display: none;
+}
+
 body {
   color: #ff6060;
   font-family: "Montserrat", sans-serif;
@@ -52,6 +56,15 @@ header nav a {
 
 .lien-souligne {
   text-decoration: underline;
+}
+
+.content-parent {
+  overflow: hidden;
+  transition: height ease 0.4s;
+}
+
+.content-show {
+  transition: height ease 0.4s;
 }
 
 .main-erreur404 {
