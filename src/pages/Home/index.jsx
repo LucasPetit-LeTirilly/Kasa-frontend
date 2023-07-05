@@ -6,13 +6,13 @@ import CarteLogement from "../../components/CarteLogement";
 import { useFetch } from "../../utils/hooks";
 
 function Home() {
-  const { logementsData } = useFetch();
+  const { tousLogementsData } = useFetch();
   return (
     <React.Fragment>
       <Header />
       <main>
         <section className="background-gris">
-          {logementsData.map((logement) => (
+          {tousLogementsData.map((logement) => (
             <Link to={`pagelogement/${logement.id}`} key={logement.id}>
               <article>
                 <CarteLogement logement={logement} />

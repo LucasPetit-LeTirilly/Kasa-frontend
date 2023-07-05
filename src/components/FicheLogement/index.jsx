@@ -1,17 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useFetchById } from "../../utils/hooks";
+import Carousel from "../Carousel";
 
 function FicheLogement() {
-  const { dataFicheLogement } = useFetchById();
-  const logement = dataFicheLogement;
+  const { dataLogement } = useFetchById();
+  const images = dataLogement.pictures;
 
   return (
     <section>
-      {logement ? (
-        <React.Fragment>
-          <p>{logement.title}</p> <img src={logement.pictures?.[0]} />
-        </React.Fragment>
-      ) : null}
+      <p>{dataLogement.title}</p>
+      <Carousel longueur={images?.length} images={images} />
     </section>
   );
 }

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 export function useFetch() {
-  const [logementsData, setLogementsData] = useState([]);
+  const [tousLogementsData, setTousLogementsData] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -13,23 +13,33 @@ export function useFetch() {
         },
       });
 
-      const logementsData = await response.json();
+      const tousLogementsData = await response.json();
 
-      setLogementsData(logementsData);
+      setTousLogementsData(tousLogementsData);
     }
     fetchData();
   }, []);
 
-  return { logementsData };
+  return { tousLogementsData };
 }
 
 export function useFetchById() {
-  const [dataFicheLogement, setDataFicheLogement] = useState([]);
+  const [dataLogement, setDataLogement] = useState([]);
   const paramUrl = useParams();
   const id = paramUrl.logementId;
-  const { logementsData } = useFetch();
   useEffect(() => {
-    setDataFicheLogement(logementsData.find((element) => element.id === id));
-  }, [logementsData, id]);
-  return { dataFicheLogement };
+    async function fetchDataById(id) {
+      const response = await fetch("/logements.json", {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      });
+
+      const tousLogements = await response.json();
+      setDataLogement(tousLogements.find((element) => element.id === id));
+    }
+    fetchDataById(id);
+  }, [id]);
+  return { dataLogement };
 }
