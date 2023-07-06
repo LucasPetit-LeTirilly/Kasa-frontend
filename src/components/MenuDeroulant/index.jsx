@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useRef } from "react";
+import fleche from "../../assets/logos/arrow-white.svg";
 
 function MenuDeroulant(props) {
   // faire l'animation de la petite fleche qui tourne quand on clique
@@ -14,7 +15,13 @@ function MenuDeroulant(props) {
   return (
     <div>
       <div>{props.texteAffiche}</div>
-      <button onClick={triggerCollapse}>Fleche</button>
+      <button onClick={triggerCollapse}>
+        <img
+          src={fleche}
+          alt="Fleche de déroulement"
+          className={isCollapsed ? "fleche-en-haut" : "fleche-en-bas"}
+        />
+      </button>
       <div
         ref={contentRef}
         className={isCollapsed ? "content-parent" : "content-show"}

@@ -60,11 +60,24 @@ header nav a {
 
 .content-parent {
   overflow: hidden;
-  transition: height ease 0.4s;
+  transition: height ease-out 0.3s;
 }
 
 .content-show {
-  transition: height ease 0.4s;
+  transition: height ease-out 0.3s;
+}
+
+.fleche-en-haut {
+  width: 2rem;
+  height: 2rem;
+  transition: transform ease-out 0.3s;
+}
+
+.fleche-en-bas {
+  width: 2rem;
+  height: 2rem;
+  transform: rotate(-180deg);
+  transition: transform ease-out 0.3s;
 }
 
 .main-erreur404 {
