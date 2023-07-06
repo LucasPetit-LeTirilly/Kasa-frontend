@@ -16,8 +16,12 @@ const Carousel = (props) => {
 
   return (
     <div className="carousel">
-      <button onClick={precedent}>Previous</button>
-      <button onClick={suivant}>Next</button>
+      {longueur === 1 ? null : (
+        <React.Fragment>
+          <button onClick={precedent}>Previous</button>
+          <button onClick={suivant}>Next</button>
+        </React.Fragment>
+      )}
       {
         <img
           src={props.images?.[index]}
@@ -25,7 +29,7 @@ const Carousel = (props) => {
           key={props.images?.[index]}
         />
       }
-      <p>{index}</p>
+      {longueur === 1 ? null : <p>{`${index + 1}/${longueur}`}</p>}
     </div>
   );
 };
