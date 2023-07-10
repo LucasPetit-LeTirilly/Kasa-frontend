@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  color: #ff6060;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-left: 6.95%;
+  margin-right: 6.95%;
+  line-height: 142.6%;
+}
+
+@media screen and (max-width: 610px) {
+  body {
+    margin-left: 5.35%;
+    margin-right: 5.35%;
+  }
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.81rem;
+  font-size: 1.5rem;
+}
+header nav a {
+  margin-left: 3.56rem;
+}
+
+.lien-souligne {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 610px) {
+  header {
+    margin-top: 1.25rem;
+    font-size: 1rem;
+  }
+  header img {
+    width: 9.06rem;
+  }
+}
+@media screen and (max-width: 440px) {
+  header {
+    font-size: 0.75rem;
+  }
+  header nav a {
+    margin-left: 1.62rem;
+  }
+}
+
+/*# sourceMappingURL=style-header.css.map */

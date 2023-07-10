@@ -3,7 +3,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import FicheLogement from "../../components/FicheLogement";
 
-function PageLogement() {
+function Logement() {
   return (
     <React.Fragment>
       <Header />
@@ -13,4 +13,4 @@ function PageLogement() {
   );
 }
 
-export default PageLogement;
+export default Logement;

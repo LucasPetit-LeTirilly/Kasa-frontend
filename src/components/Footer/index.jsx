@@ -1,4 +1,4 @@
-import "../../utils/style/css/style.css";
+import "../../utils/style/css/style-footer.css";
 import logo from "../../assets/logos/logo-kasa-noir.svg";
 
 function Footer() {

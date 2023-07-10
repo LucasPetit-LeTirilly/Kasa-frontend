@@ -13,7 +13,7 @@ function Home() {
       <main>
         <section className="background-gris">
           {tousLogementsData.map((logement) => (
-            <Link to={`pagelogement/${logement.id}`} key={logement.id}>
+            <Link to={`logement/${logement.id}`} key={logement.id}>
               <article>
                 <CarteLogement logement={logement} />
               </article>
