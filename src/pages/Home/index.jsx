@@ -6,6 +6,7 @@ import CarteLogement from "../../components/CarteLogement";
 import { useFetch } from "../../utils/hooks";
 import imageBanner from "../../assets/images/image-banner-1.png";
 import Banner from "../../components/BannerHome";
+import "../../utils/style/css/style-home.css";
 
 function Home() {
   const { tousLogementsData } = useFetch();
@@ -14,12 +15,10 @@ function Home() {
       <Header />
       <main>
         <Banner image={imageBanner} texte="Chez vous, partout et ailleurs" />
-        <section className="background-gris">
+        <section className="section-carte">
           {tousLogementsData.map((logement) => (
             <Link to={`logement/${logement.id}`} key={logement.id}>
-              <article>
-                <CarteLogement logement={logement} />
-              </article>
+              <CarteLogement logement={logement} image={logement.cover} />
             </Link>
           ))}
         </section>
