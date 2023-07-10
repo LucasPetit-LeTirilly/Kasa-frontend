@@ -30,8 +30,6 @@ function FicheLogement() {
     );
   });
 
-  console.log(nbEtoile);
-
   return (
     <section>
       <p>{dataLogement.title}</p>

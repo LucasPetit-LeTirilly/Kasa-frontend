@@ -48,16 +48,32 @@ body {
     margin-right: 5.35%;
   }
 }
-.etoile-pleine {
-  width: 1.125rem;
-  height: 1.125rem;
-  filter: brightness(0) saturate(100%) invert(41%) sepia(92%) saturate(933%) hue-rotate(326deg) brightness(111%) contrast(104%);
+.banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 13.93rem;
+  border-radius: 1.5625rem;
+  font-size: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  margin-top: 2.38rem;
+  line-height: 142.6%;
+}
+.banner p {
+  z-index: 1;
+}
+.banner .color-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 1.5625rem;
 }
 
-.etoile-vide {
-  width: 1.125rem;
-  height: 1.125 rem;
-  filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(522%) hue-rotate(51deg) brightness(117%) contrast(93%);
-}
-
-/*# sourceMappingURL=style-fiche-logement.css.map */
+/*# sourceMappingURL=style-banner-apropos.css.map */

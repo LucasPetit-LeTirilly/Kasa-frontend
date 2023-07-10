@@ -1,0 +1,116 @@
+// reset css
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// ================ end of reset ============
+
+// variables
+$color-primary: #ff6060;
+$color-secondary: #ffffff;
+$color-tertiary :#F6F6F6;
+$color-footer: #000000;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.hidden {
+  display: none;
+}
+
+body {
+  color: $color-primary;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-left: 6.95%;
+  margin-right: 6.95%;
+  line-height: 142.6%;
+}
+
+@media screen and (max-width: 610px){
+  body {
+    margin-left: 5.35%;
+    margin-right: 5.35%;
+  }
+}
+
+.banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 13.93rem;
+  border-radius: 1.5625rem;
+  font-size: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: $color-secondary;
+  margin-top: 3.13rem;
+  line-height: 142.6%;
+  p{
+    z-index: 1;
+  }
+  .color-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.3);
+    border-radius: 1.5625rem;
+  }
+}
+
+@media screen and (max-width: 850px){
+  .banner {
+    p{
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+  }
+}
+
+
+@media screen and (max-width: 600px){
+  .banner {
+    font-size: 1.5rem;
+    height: 7rem;
+    line-height: 100%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .banner {
+    p {
+      margin-left: 1rem;
+      margin-right: 6rem;
+    }
+  }
+}
