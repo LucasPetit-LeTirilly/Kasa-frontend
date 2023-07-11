@@ -13,8 +13,8 @@ function TexteDeroulant(props) {
   };
 
   return (
-    <div>
-      <div onClick={triggerCollapse}>
+    <article className="texte-deroulant">
+      <div onClick={triggerCollapse} className="entete">
         <div>{props.texteAffiche}</div>
         <img
           src={fleche}
@@ -24,10 +24,10 @@ function TexteDeroulant(props) {
       </div>
       <div
         ref={contentRef}
-        className={isCollapsed ? "content-parent" : "content-show"}
+        className="texte-cache"
         style={
           isCollapsed
-            ? { height: "0px" }
+            ? { height: "0px", paddingTop: "0rem", paddingBottom: "0rem" }
             : { height: contentRef.current.scrollHeight + "px" }
         }
       >
@@ -39,11 +39,11 @@ function TexteDeroulant(props) {
               ))}
             </ul>
           ) : (
-            props.texteCache
+            <p>{props.texteCache}</p>
           )}
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 
