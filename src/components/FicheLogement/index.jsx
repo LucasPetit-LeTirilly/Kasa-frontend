@@ -31,15 +31,18 @@ function FicheLogement() {
   });
 
   return (
-    <section>
-      <p>{dataLogement.title}</p>
+    <section className="fiche-logement">
       <Carousel longueur={images?.length} images={images} />
-      <div className="tags">
-        {dataLogement.tags?.map((item) => (
-          <p key={item} className="tag">
-            {item}
-          </p>
-        ))}
+      <div className="titre-et-tags">
+        <p>{dataLogement.title}</p>
+        <p>{dataLogement.location}</p>
+        <div className="tags">
+          {dataLogement.tags?.map((item) => (
+            <p key={item} className="tag">
+              {item}
+            </p>
+          ))}
+        </div>
       </div>
       <div className="etoiles">
         {etoilesPleines}

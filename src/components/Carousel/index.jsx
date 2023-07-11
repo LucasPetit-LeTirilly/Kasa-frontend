@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import flechePrecedente from "../../assets/logos/fleche-precedent.svg";
+import flecheSuivant from "../../assets/logos/fleche-suivant.svg";
+import "../../utils/style/css/style-carousel.css";
 
 const Carousel = (props) => {
   const [index, setIndex] = useState(0);
@@ -16,12 +19,6 @@ const Carousel = (props) => {
 
   return (
     <div className="carousel">
-      {longueur === 1 ? null : (
-        <React.Fragment>
-          <button onClick={precedent}>Previous</button>
-          <button onClick={suivant}>Next</button>
-        </React.Fragment>
-      )}
       {
         <img
           src={props.images?.[index]}
@@ -29,6 +26,16 @@ const Carousel = (props) => {
           key={props.images?.[index]}
         />
       }
+      {longueur === 1 ? null : (
+        <React.Fragment>
+          <button onClick={precedent} className="fleche-carousel">
+            <img src={flechePrecedente} alt="Fleche photographie précédente" />
+          </button>
+          <button onClick={suivant} className="fleche-carousel">
+            <img src={flecheSuivant} alt="Fleche photographie suivante" />
+          </button>
+        </React.Fragment>
+      )}
       {longueur === 1 ? null : <p>{`${index + 1}/${longueur}`}</p>}
     </div>
   );

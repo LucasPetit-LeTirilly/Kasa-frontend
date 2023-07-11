@@ -76,6 +76,10 @@ body {
   font-size: 1.125rem;
   margin: 1rem 1.25rem 1.25rem;
 }
+.texte-deroulant .texte-cache ul {
+  font-size: 1.125rem;
+  margin: 1rem 1.25rem 1.25rem;
+}
 
 .fleche-en-haut {
   width: 2rem;
@@ -104,6 +108,10 @@ ul {
     height: 1.2rem;
   }
   .texte-deroulant .texte-cache p {
+    margin: 0.8rem 1.25rem 1.2rem;
+    font-size: 0.75rem;
+  }
+  .texte-deroulant .texte-cache ul {
     margin: 0.8rem 1.25rem 1.2rem;
     font-size: 0.75rem;
   }
