@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import CarteLogement from "../../components/CarteLogement";
@@ -17,9 +16,11 @@ function Home() {
         <Banner image={imageBanner} texte="Chez vous, partout et ailleurs" />
         <section className="section-carte">
           {tousLogementsData.map((logement) => (
-            <Link to={`logement/${logement.id}`} key={logement.id}>
-              <CarteLogement logement={logement} image={logement.cover} />
-            </Link>
+            <CarteLogement
+              logement={logement}
+              image={logement.cover}
+              key={logement.id}
+            />
           ))}
         </section>
       </main>
