@@ -32,7 +32,11 @@ function FicheLogement() {
 
   return (
     <section className="fiche-logement">
-      <Carousel longueur={images?.length} images={images} />
+      <Carousel
+        longueur={images?.length}
+        images={images}
+        className="carousel"
+      />
       <div className="titre-et-tags">
         <p>{dataLogement.title}</p>
         <p>{dataLogement.location}</p>

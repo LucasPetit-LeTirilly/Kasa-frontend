@@ -65,6 +65,49 @@ body {
   margin-bottom: 3.12rem;
 }
 
+.carousel {
+  .container-image {
+    position: relative;
+    height: 26rem;
+    width: 100%;
+    .image-carousel {
+      object-fit: cover; 
+      object-position: center;
+      height: 26rem;
+      width: 100%;
+      }
+      button {
+        background-color: transparent;
+        border: none;
+      }
+      .fleche-carousel {
+        width: 2.92rem;
+        height: 4.95rem;
+      }
+      .fleche-precedente {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+      }
+      .fleche-suivante {
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        -webkit-transform: translate(-100%, -50%);
+      }
+      .index {
+        position: absolute;
+        top: 0rem;
+        left: 50%;
+        top: 94%;
+        -webkit-transform: translate(0, -100%);
+        color: $color-secondary;
+        font-size: 1.125rem;
+      }
+  }
+  
+}
+
 .etoile-pleine {
   width: 1.125rem;
   height: 1.125rem;
@@ -81,5 +124,20 @@ body {
   .fiche-logement {
     margin-top: 1.69rem;
     margin-bottom: 1.69rem;
+  }
+  .carousel {
+    .container-image {
+      height: 16rem;
+    .image-carousel {
+      height: 16rem;
+      }
+      .fleche-carousel {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      .index {
+        display: none;
+      }
+    }
   }
 }
