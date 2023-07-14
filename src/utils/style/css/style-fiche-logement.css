@@ -63,6 +63,7 @@ body {
   object-position: center;
   height: 26rem;
   width: 100%;
+  border-radius: 1.5625rem;
 }
 .carousel .container-image button {
   background-color: transparent;
@@ -93,16 +94,91 @@ body {
   font-size: 1.125rem;
 }
 
-.etoile-pleine {
+.infos-logement {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 1.88rem;
+  margin-bottom: 1.5rem;
+}
+
+.titre-et-tags {
+  color: #ff6060;
+}
+.titre-et-tags .titre {
+  font-size: 2.25rem;
+  line-height: 120%;
+}
+.titre-et-tags .lieu {
+  display: block;
+  font-size: 1.125rem;
+  margin-top: 0.8em;
+}
+.titre-et-tags .tags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  font-size: 0.875rem;
+  margin-top: 1.25rem;
+}
+.titre-et-tags .tag {
+  width: 7.19rem;
+  height: 1.56rem;
+  margin-right: 0.62rem;
+  text-align: center;
+  color: #ffffff;
+  background-color: #ff6060;
+  border-radius: 0.625rem;
+  font-size: 0.875rem;
+}
+
+.profil-loueur {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.69rem;
+}
+.profil-loueur p {
+  font-size: 1.125rem;
+  text-align: right;
+  margin-right: 1rem;
+}
+.profil-loueur .image-profil-container {
+  width: 4rem;
+  height: 4rem;
+}
+.profil-loueur img {
+  object-fit: contain;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.etoiles {
+  display: flex;
+  gap: 0.4rem;
+}
+.etoiles .etoile-pleine {
   width: 1.125rem;
   height: 1.125rem;
   filter: brightness(0) saturate(100%) invert(41%) sepia(92%) saturate(933%) hue-rotate(326deg) brightness(111%) contrast(104%);
 }
-
-.etoile-vide {
+.etoiles .etoile-vide {
   width: 1.125rem;
   height: 1.125 rem;
   filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(522%) hue-rotate(51deg) brightness(117%) contrast(93%);
+}
+
+.textes-deroulants {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 6%;
+}
+.textes-deroulants .texte-deroulant {
+  width: 50%;
 }
 
 @media screen and (max-width: 650px) {
@@ -122,6 +198,66 @@ body {
   }
   .carousel .container-image .index {
     display: none;
+  }
+  .infos-logement {
+    margin-top: 0.94rem;
+    margin-bottom: 0.8rem;
+    flex-direction: column;
+  }
+  .titre-et-tags {
+    color: #ff6060;
+  }
+  .titre-et-tags .titre {
+    font-size: 1.125rem;
+    line-height: 35%;
+  }
+  .titre-et-tags .lieu {
+    font-size: 0.875rem;
+  }
+  .titre-et-tags .tags {
+    margin-top: 0.62rem;
+    margin-bottom: 1rem;
+  }
+  .titre-et-tags .tag {
+    width: 5.25rem;
+    height: 1.13rem;
+    font-size: 0.625rem;
+    line-height: 1rem;
+  }
+  .profil-loueur {
+    margin-bottom: 0rem;
+  }
+  .profil-loueur p {
+    font-size: 0.75rem;
+    margin-right: 0.3rem;
+    line-height: 100%;
+  }
+  .profil-loueur .image-profil-container {
+    width: 2rem;
+    height: 2rem;
+  }
+  .profil-loueur img {
+    object-fit: contain;
+    object-position: center;
+    border-radius: 50%;
+  }
+  .profil-et-etoiles {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .etoiles {
+    gap: 0.4rem;
+  }
+  .etoiles .etoile-pleine {
+    width: 1rem;
+    height: 1rem;
+  }
+  .etoiles .etoile-vide {
+    width: 1rem;
+    height: 1rem;
   }
 }
 
