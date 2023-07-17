@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import flechePrecedente from "../../assets/logos/fleche-precedent.svg";
 import flecheSuivant from "../../assets/logos/fleche-suivant.svg";
-import "../../utils/style/css/style-carousel.css";
 
 const Carousel = (props) => {
   const [index, setIndex] = useState(0);
