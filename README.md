@@ -8,4 +8,4 @@ Technologies employées:
 - Sass, version 1.63.6
 
 Les données du back end sont ici simulées à partir du fichier logements.json situé dans src/assets.
-Le composant react Navigation (situé dans src/components) contient le routing react-router
+Le composant react Navigation (situé dans src/components) contient le routing réalisé avec react-router.
